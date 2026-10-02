@@ -1,15 +1,40 @@
-body,div,table,thead,tbody,tfoot,tr,th,td,p { 
-    font-family:"Liberation Sans"; font-size:x-small 
+* { 
+    font-family: "Calibri"; 
+    font-size: 1rem;
 }
 
-a.comment-indicator:hover + comment { 
-    background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;
-} 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
-a.comment-indicator { 
-    background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;
-} 
+table {
+    table-layout: fixed;
+    flex-direction: row;
+    overflow: scroll;
+}
 
-comment { 
-    display:none;
-} 
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: auto;
+}
+
+th {
+    justify-content: flex-start;
+    align-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: cornflowerblue;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+
+td {
+    justify-content: flex-start;
+    align-content: center;
+    padding: 15px;
+    min-width: fit-content;
+    white-space: nowrap;
+}
